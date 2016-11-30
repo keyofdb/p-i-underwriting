@@ -1,0 +1,9 @@
+{
+  "id": "Get Settings Request",
+  "type": "object",
+  "properties": {
+    "companyId": { "type": "string" },
+    "productId": { "type": "string" },
+    "zip": { "type": "string" }
+  }
+}

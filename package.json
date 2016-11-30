@@ -1,0 +1,19 @@
+{
+  "name": "pi-underwriting",
+  "version": "1.0.0",
+  "description": "property-insurance-underwriting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keyofdb/pi-underwriting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keyofdb/pi-underwriting/issues"
+  },
+  "homepage": "https://github.com/keyofdb/pi-underwriting#readme"
+}
