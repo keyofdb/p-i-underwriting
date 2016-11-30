@@ -1,0 +1,228 @@
+{
+  "companyId": "TTIC",
+  "productId": "HO3",
+  "zip": "33624",
+
+  // General Information
+  "suspended": false,
+  "availableSlots": 5,
+  "effectiveDateMinOffset": 5,
+  "effectiveDateMaxOffset": 30,
+
+  // Coverage Limits
+  "coverageLimits": {
+    "dwelling": {
+      "displayName": "Dwelling",
+      "letterDesignation": "A",
+      "required": true,
+      "restrictionType": "Range",
+      "rangeFormat": "Currency",
+      "rangeAmountMin": 125000,
+      "rangeAmountMax": 1000000,
+      "rangeRefCoverageLimitKey": null,
+      "choices": []
+    },
+    "otherStructures": {
+      "displayName": "Other Structures",
+      "letterDesignation": "B",
+      "required": true,
+      "restrictionType": "Range",
+      "rangeFormat": "Percentage",
+      "rangeAmountMin": 0,
+      "rangeAmountMax": 10,
+      "rangeRefCoverageLimitKey": "dwelling",
+      "choices": []
+    },
+    "personalProperty": {
+      "displayName": "Personal Property",
+      "letterDesignation": "C",
+      "required": true,
+      "restrictionType": "Range",
+      "rangeFormat": "Percentage",
+      "rangeAmountMin": 0,
+      "rangeAmountMax": 50,
+      "rangeRefCoverageLimitKey": "dwelling",
+      "choices": []
+    },
+    "lossOfUse": {
+      "displayName": "Loss of Use",
+      "letterDesignation": "D",
+      "required": true,
+      "restrictionType": "Range",
+      "rangeFormat": "Percentage",
+      "rangeAmountMin": 0,
+      "rangeAmountMax": 10,
+      "rangeRefCoverageLimitKey": "dwelling",
+      "choices": []
+    },
+    "personalLiability": {
+      "displayName": "Personal Liability",
+      "letterDesignation": "E",
+      "required": true,
+      "restrictionType": "Static",
+      "rangeFormat": "Currency",
+      "rangeAmountMin": 100000,
+      "rangeAmountMax": 100000,
+      "rangeRefCoverageLimitKey": null,
+      "choices": []
+    },
+    "medicalPayments": {
+      "displayName": "Medical Payments",
+      "letterDesignation": "F",
+      "required": true,
+      "restrictionType": "Static",
+      "rangeFormat": "Currency",
+      "rangeAmountMin": 2000,
+      "rangeAmountMax": 2000,
+      "rangeRefCoverageLimitKey": null,
+      "choices": []
+    },
+    "moldProperty": {
+      "displayName": "Mold Property",
+      "letterDesignation": null,
+      "required": true,
+      "restrictionType": "Choices",
+      "rangeFormat": null,
+      "rangeAmountMin": null,
+      "rangeAmountMax": null,
+      "rangeRefCoverageLimitKey": null,
+      "choices": [
+        {
+          "format": "Currency",
+          "amount": 10000,
+          "refCoverageLimitKey": null,
+          "default": true
+        },
+        {
+          "format": "Currency",
+          "amount": 25000,
+          "refCoverageLimitKey": null,
+          "default": false
+        },
+        {
+          "format": "Currency",
+          "amount": 50000,
+          "refCoverageLimitKey": null,
+          "default": false
+        }
+      ]
+    },
+    "moldLiability": {
+      "displayName": "Mold Liability",
+      "letterDesignation": null,
+      "required": true,
+      "restrictionType": "Range",
+      "rangeFormat": "Currency",
+      "rangeAmountMin": null,
+      "rangeAmountMax": null,
+      "rangeRefCoverageLimitKey": null,
+      "choices": [
+        {
+          "format": "Currency",
+          "amount": 50000,
+          "refCoverageLimitKey": null,
+          "default": true
+        },
+        {
+          "format": "Currency",
+          "amount": 100000,
+          "refCoverageLimitKey": null,
+          "default": false
+        }
+      ]
+    },
+    "ordinanceOrLaw": {
+      "displayName": "Ordinance or Law",
+      "letterDesignation": null,
+      "required": true,
+      "restrictionType": "Choices",
+      "rangeFormat": null,
+      "rangeAmountMin": null,
+      "rangeAmountMax": null,
+      "rangeRefCoverageLimitKey": null,
+      "choices": [
+        {
+          "format": "Percentage",
+          "amount": 25,
+          "refCoverageLimitKey": "dwelling",
+          "default": true
+        },
+        {
+          "format": "Percentage",
+          "amount": 50,
+          "refCoverageLimitKey": "dwelling",
+          "default": false
+        }
+      ]
+    }
+  },
+
+  // Coverage Options
+  "coverageOptions": {
+    "personalPropertyRPC": {
+      "displayName": "Personal Property Replacement Cost",
+      "choices": ["Yes", "No"]
+    },
+    "incidentalOccupancyDwelling": {
+      "displayName": "Permitted Incidental Occupancies for Dwelling",
+      "choices": ["Yes", "No"]
+    },
+    "incidentalOccupancyOtherStructures": {
+      "displayName": "Permitted Incidental Occupancies for Other Structures",
+      "choices": ["Yes", "No"]
+    },
+    "sinkholePerilCoverage": {
+      "displayName": "Sinkhole Peril Coverage",
+      "choices": ["Yes", "No"]
+    }
+  },
+
+  // Deductibles
+  "deductibles": {
+    "hurricane": {
+      "displayName": "Hurricane",
+      "choices": [
+        {
+          "format": "Currency",
+          "amount": 500,
+          "refCoverageKey": null
+        },
+        {
+          "format": "Currency",
+          "amount": 1000,
+          "refCoverageKey": null
+        }
+      ]
+    },
+    "sinkhole": {
+      "displayName": "Sinkhole",
+      "choices": [
+        {
+          "format": "Percentage",
+          "amount": 10,
+          "refCoverageKey": "dwelling"
+        },
+        {
+          "format": "Percentage",
+          "amount": 15,
+          "refCoverageLimitKey": "dwelling"
+        }
+      ]
+    },
+    "allOtherPerils": {
+      "displayName": "All Other Perils",
+      "choices": [
+        {
+          "format": "Currency",
+          "amount": 2000,
+          "refCoverageLimitKey": null
+        },
+        {
+          "format": "Currency",
+          "amount": 5000,
+          "refCoverageLimitKey": null
+        }
+      ]
+    }
+  }
+}
