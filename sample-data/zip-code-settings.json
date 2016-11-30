@@ -18,7 +18,7 @@
       "restrictionType": "Range",
       "rangeFormat": "Currency",
       "rangeAmountMin": 125000,
-      "rangeAmountMax": 1000000,
+      "rangeAmountMax": 2000000,
       "rangeRefCoverageLimitKey": null,
       "choices": []
     },
@@ -201,11 +201,6 @@
           "format": "Percentage",
           "amount": 10,
           "refCoverageKey": "dwelling"
-        },
-        {
-          "format": "Percentage",
-          "amount": 15,
-          "refCoverageLimitKey": "dwelling"
         }
       ]
     },
