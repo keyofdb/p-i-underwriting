@@ -56,37 +56,11 @@
     "CoverageLimit": {
       "type": "object",
       "properties": {
-        "coverageLimitId": { "type": "string" },
-        "name": { "type": "string" },
+        "displayName": { "type": "string" },
         "letterDesignation": { "type": "string" },
         "format": { "type": "string" },
-        "amount": { "type": "number" },
-        "refCoverageKey": { "type": "string" }
-      }
-    },
-
-    // Coverage Limit Setting
-    "CoverageLimitSetting": {
-      "type": "object",
-      "properties": {
-        "coverageLimitId": { "type": "string" },
-        "name": { "type": "string" },
-        "letterDesignation": { "type": "string" },
-        "choiceType": { "type": "string" },
-        "format": { "type": "string" },
-        "amountMin": { "type": "number" },
-        "amountMax": { "type": "number" },
-        "choices": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "format": { "type": "string" },
-              "amount": { "type": "number" },
-              "refCoverageLimitId": { "type": "string" }
-            }
-          }
-        }
+        "refCoverageKey": { "type": "string" },
+        "amount": { "type": "number" }
       }
     },
 
@@ -94,23 +68,8 @@
     "CoverageOption": {
       "type": "object",
       "properties": {
-        "coverageOptionId": { "type": "string" },
-        "name": { "type": "string" },
-        "choice": { "type": "string" }
-      }
-    },
-
-    // Coverage Option Settings
-    "CoverageOptionSetting": {
-      "type": "object",
-      "properties": {
-        "coverageOptionId": { "type": "string" },
-        "name": { "type": "string" },
-        "choices": {
-          "type": "array",
-          "items": { "type": "string" }
-          }
-        }
+        "displayName": { "type": "string" },
+        "answer": { "type": "string" }
       }
     },
 
@@ -118,32 +77,11 @@
     "Deductible": {
       "type": "object",
       "properties": {
-        "deductibleId": { "type": "string" },
-        "name": { "type": "string" },
+        "displayName": { "type": "string" },
         "format": { "type": "string" },
         "amount": { "type": "number" },
         "refCoverageKey": { "type": "string" }
       }
-    },
-
-    // Deductible Setting
-    "DeductibleSetting": {
-        "type": "object",
-        "properties": {
-          "deductibleId": { "type": "string" },
-          "name": { "type": "string" },
-          "choices": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "format": { "type": "string" },
-                "amount": { "type": "number" },
-                "refCoverageLimitId": { "type": "string" }
-              }
-            }
-          }
-        }
     },
 
     // Underwriting Question

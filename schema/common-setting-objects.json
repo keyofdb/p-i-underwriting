@@ -1,0 +1,57 @@
+{
+  "definitions": {
+
+    // Coverage Limit Setting
+    "CoverageLimitSetting": {
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "letterDesignation": { "type": "string" },
+        "format": { "type": "string" },
+        "refCoverageLimitKey": { "type": "string" },
+        "restriction": { "type": "string" },
+        "range": {
+          "type": "object",
+          "properties": {
+            "format": { "type": "string" },
+            "refCoverageLimit": { "type": "string" },
+            "minAmount": { "type": "integer" },
+            "maxAmount": { "type": "integer" }
+          }
+        },
+        "choices": {
+          "type": "array",
+          "items": "integer"
+          }
+        }
+      }
+    },
+
+    // Coverage Option Setting
+    "CoverageOptionSetting": {
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "choices": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    // Deductible Setting
+    "DeductibleSetting": {
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "format": { "type": "string" },
+        "refCoverageLimitKey": { "type": "string" },
+        "choices": {
+          "type": "array",
+          "items": "string"
+        }
+      }
+    }
+
+  }
+}

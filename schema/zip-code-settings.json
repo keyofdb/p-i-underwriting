@@ -1,0 +1,44 @@
+{
+  "id": "zip-code-settings",
+  "type": "object",
+  "properties": {
+    "companyId": { "type": "string" },
+    "product": { "type": "string" },
+    "zip": { "type": "string" },
+    "suspended": { "type": "boolean" },
+    "availableSlots": { "type": "integer" },
+    "minEffectiveDate": { "type": "integer" },
+    "maxEffectiveDate": { "type": "integer" },
+    "coverageLimitSettings": {
+      "type": "object",
+      "properties": {
+        "dwelling": { "$ref": "common-setting-objects.json#/CoverageLimitSetting" },
+        "otherStructures": { "$ref": "common-setting-objects.json#/CoverageLimitSetting" },
+        "personalProperty": { "$ref": "common-setting-objects.json#/CoverageLimitSetting" },
+        "lossOfUse": { "$ref": "common-setting-objects.json#/CoverageLimitSetting" },
+        "personalLiability": { "$ref": "common-setting-objects.json#/CoverageLimitSetting" },
+        "medicalPayments": { "$ref": "common-setting-objects.json#/CoverageLimitSetting" },
+        "moldProperty": { "$ref": "common-setting-objects.json#/CoverageLimitSetting" },
+        "moldLiability": { "$ref": "common-setting-objects.json#/CoverageLimitSetting" },
+        "ordinanceOrLaw": { "$ref": "common-setting-objects.json#/CoverageLimitSetting" }
+      }
+    },
+    "coverageOptionSettings": {
+      "type": "object",
+      "properties": {
+        "personalPropertyRPC": { "$ref": "common-setting-objects.json#/CoverageOptionSetting" },
+        "incidentalOccupancyDwelling": { "$ref": "common-setting-objects.json#/CoverageOptionSetting" },
+        "incidentalOccupancyOtherStructures": { "$ref": "common-setting-objects.json#/CoverageOptionSetting" },
+        "sinkholePerilCoverage": { "$ref": "common-setting-objects.json#/CoverageOptionSetting" }
+      }
+    },
+    "deductibleSettings": {
+      "type": "object",
+      "properties": {
+        "hurricane": { "$ref": "common-setting-objects.json#/DeductibleSetting" },
+        "sinkhole": { "$ref": "common-setting-objects.json#/DeductibleSetting" },
+        "allOtherPerils": { "$ref": "common-setting-objects.json#/DeductibleSetting" }
+      }
+    }
+  }
+}
