@@ -14,122 +14,88 @@
     "dwelling": {
       "displayName": "Dwelling",
       "letterDesignation": "A",
+      "format": "Currency",
       "restriction": "Range",
-      "rangeFormat": "Currency",
-      "min": 125000,
-      "max": 2000000
+      "range": {
+        "format": "Currency",
+        "minAmount": 125000,
+        "maxAmount": 2000000
+      }
     },
     "otherStructures": {
       "displayName": "Other Structures",
       "letterDesignation": "B",
-      "limitFormat": "Currency",
+      "format": "Currency",
       "restriction": "Range",
-      "rangeFormat": "Percentage",
-      "min": 0,
-      "max": 10,
-      "refCoverageLimit": "dwelling",
+      "range": {
+        "format": "Percentage",
+        "refCoverageLimit": "dwelling",
+        "minAmount": 0,
+        "maxAmount": 10
+      }
     },
     "personalProperty": {
       "displayName": "Personal Property",
       "letterDesignation": "C",
-      "format": "Percentage",
+      "format": "Currency",
       "restriction": "Range",
-      "amountMin": 0,
-      "amountMax": 50,
-      "rangeRefCoverageLimitKey": "dwelling",
-      "choices": null,
+      "range": {
+        "format": "Percentage",
+        "refCoverageLimitKey": "dwelling",
+        "minAmount": 0,
+        "maxAmount": 50
+      }
     },
     "lossOfUse": {
       "displayName": "Loss of Use",
       "letterDesignation": "D",
-      "restrictionType": "Range",
-      "rangeFormat": "Percentage",
-      "rangeAmountMin": 0,
-      "rangeAmountMax": 10,
-      "rangeRefCoverageLimitKey": "dwelling",
-      "choices": []
+      "format": "Currency",
+      "restriction": "Range",
+      "range": {
+        "format": "Percentage",
+        "refCoverageLimitKey": "dwelling",
+        "minAmount": 0,
+        "maxAmount": 10
+      }
     },
     "personalLiability": {
       "displayName": "Personal Liability",
       "letterDesignation": "E",
-      "restrictionType": "Static",
-      "rangeFormat": "Currency",
-      "rangeAmountMin": 100000,
-      "rangeAmountMax": 100000,
-      "rangeRefCoverageLimitKey": null,
-      "choices": []
+      "format": "Currency",
+      "restriction": "Choice",
+      "choices": [100000, 300000]
     },
     "medicalPayments": {
       "displayName": "Medical Payments",
       "letterDesignation": "F",
-      "restrictionType": "",
-      "rangeFormat": "Currency",
-      "rangeAmountMin": 2000,
-      "rangeAmountMax": 2000,
-      "rangeRefCoverageLimitKey": null,
-      "choices": [
-
-      ]
+      "restriction": "Range",
+      "range": {
+        "format": "Percentage",
+        "refCoverageLimitKey": "dwelling",
+        "minAmount": 0,
+        "maxAmount": 10
+      }
     },
     "moldProperty": {
       "displayName": "Mold Property",
       "letterDesignation": null,
       "restriction": "Choice",
-      "choices": [
-        {
-          "format": "Currency",
-          "amount": 10000,
-          "refCoverageLimitKey": null,
-        },
-        {
-          "format": "Currency",
-          "amount": 25000,
-          "refCoverageLimitKey": null,
-        },
-        {
-          "format": "Currency",
-          "amount": 50000,
-          "refCoverageLimitKey": null,
-        }
-      ]
+      "choices": [10000, 25000, 50000]
     },
     "moldLiability": {
       "displayName": "Mold Liability",
       "letterDesignation": null,
+      "format": "Currency",
       "restriction": "Choice",
-      "choices": [
-        {
-          "format": "Currency",
-          "amount": 50000,
-          "refCoverageLimitKey": null,
-        },
-        {
-          "format": "Currency",
-          "amount": 100000,
-          "refCoverageLimitKey": null,
-        }
-      ]
+      "choices": [50000, 100000]
     },
     "ordinanceOrLaw": {
       "displayName": "Ordinance or Law",
       "letterDesignation": null,
+      "format": "Percentage",
+      "refCoverageLimitKey": "dwelling",
       "restriction": "Choice",
-      "rangeFormat": null,
-      "rangeAmountMin": null,
-      "rangeAmountMax": null,
-      "rangeRefCoverageLimitKey": null,
-      "choices": [
-        {
-          "format": "Percentage",
-          "amount": 25,
-          "refCoverageLimitKey": "dwelling",
-        },
-        {
-          "format": "Percentage",
-          "amount": 50,
-          "refCoverageLimitKey": "dwelling",
-        }
-      ]
+      "choices": [25, 50]
     }
   },
 
@@ -158,48 +124,18 @@
     "hurricane": {
       "displayName": "Hurricane",
       "format": "Currency",
-      "choices": [
-        {
-          "format": "Currency",
-          "amount": 500,
-          "refCoverageLimitKey": null
-        },
-        {
-          "format": "Currency",
-          "amount": 1000,
-          "refCoverageLimitKey": null
-        }
-      ]
+      "choices": [500, 1000]
     },
     "sinkhole": {
       "displayName": "Sinkhole",
-      "choices": [
-        {
-          "format": null,
-          "amount": null,
-          "refCoverageLimitKey": null
-        }
-        {
-          "format": "Percentage",
-          "amount": 10,
-          "refCoverageLimitKey": "dwelling"
-        }
-      ]
+      "format": "Percentage",
+      "refCoverageLimitKey": "dwelling",
+      "choices": [10]
     },
     "allOtherPerils": {
       "displayName": "All Other Perils",
-      "choices": [
-        {
-          "format": "Currency",
-          "amount": 2000,
-          "refCoverageLimitKey": null
-        },
-        {
-          "format": "Currency",
-          "amount": 5000,
-          "refCoverageLimitKey": null
-        }
-      ]
+      "format": "Currency",
+      "choices": [2000, 5000]
     }
   }
 }
