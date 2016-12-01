@@ -1,0 +1,10 @@
+{
+  "definitions": {
+
+    "Task": {
+      "taskId": { "type": "string" },
+      "type": { "type": "string" }
+    }
+
+  }
+}
